@@ -8,6 +8,11 @@ const csso = require('gulp-csso')
 const rename = require('gulp-rename')
 const server = require('browser-sync')
 const imagemin = require('gulp-imagemin')
+const svgstore = require('gulp-svgstore')
+
+const pipeline = require('readable-stream').pipeline
+const uglify = require('gulp-uglify-es').default
+const del = require('del')
 
 
 
@@ -55,10 +60,31 @@ function refresh (done) {
 
 function images () {
     return src('source/img/**/*.{png,jpg,jpeg}')
-        pipe(imagemin([
+        .pipe(imagemin([
             imagemin.optipng({optimizationLevel1: 3}),
             imagemin.mozjpeg({progressive: true})
         ])).pipe(dest('build/img'))
+}
+
+function sprite () {
+    return src('source/img/icon-*.svg')
+        .pipe(imagemin([imagemin.svgo()]))
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename('sprite.svg'))
+        .pipe(dest('build/img'))
+}
+
+function js () {
+    return pipeline (
+        src('source/js/*.js'),
+        sourcemaps.init(),
+        uglify(),
+        sourcemaps.write('.'),
+        rename({suffix: '.min'}),
+        dest('build/js')
+    )
 }
 
 
@@ -68,4 +94,6 @@ exports.css = css
 exports['css-nomin'] = cssNomin
 exports.serve = serve
 exports.images = images
+exports.sprite = sprite
+exports.js = js
 
