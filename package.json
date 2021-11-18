@@ -5,7 +5,13 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp css"
+    "html": "gulp html",
+    "css": "gulp css",
+    "css-nomin": "gulp css-nomin",
+    "images": "gulp images",
+    "sprite": "gulp sprite",
+    "js": "gulp js",
+    "serve": "gulp serve"
   },
   "repository": {
     "type": "git",
@@ -23,12 +29,16 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image-resize": "^0.13.1",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-scale-images": "^3.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^8.0.0",
     "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
     "readable-stream": "^3.6.0",
     "sass": "^1.43.4",
     "svgstore": "^3.0.1"

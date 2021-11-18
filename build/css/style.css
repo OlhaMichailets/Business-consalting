@@ -1,4 +1,51 @@
-@import url("./fonts");
-@import url("./global");
-@import url("./variables");
-@import url("./blocks/header.scss");
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  color: lawngreen;
+}
+
+body {
+  width: 375px;
+  margin: 0 auto;
+  background-color: #262626;
+  color: #FFFFFF;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button--burger {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.button--burger .burger-top,
+.button--burger .burger-bottom {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.button--burger .burger-middle {
+  height: 2.5rem;
+  width: 2rem;
+}

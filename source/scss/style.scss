@@ -1,5 +1,6 @@
-@import url('./fonts');
-@import url('./global');
-@import url('./variables');
+@import './fonts';
+@import './global.scss';
+@import './variables';
 
-@import url('./blocks/header');
+@import './blocks/header.scss';
+
