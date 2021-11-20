@@ -9,7 +9,6 @@ const csso = require('gulp-csso')
 const rename = require('gulp-rename')
 const server = require('browser-sync')
 const imageMin = require('gulp-imagemin')
-const webp = require('gulp-webp')
 const svgstore = require('gulp-svgstore')
 
 const pipeline = require('readable-stream').pipeline
@@ -62,7 +61,7 @@ function serve () {
     watch('source/*.html', series(html, refresh));
     watch('source/js/*.js', series(js, refresh));
     watch('source/img/icon-*.svg', series(sprite, refresh));
-    watch('source/img/**/*.{png,jpeg,jpg}', series(images, getWebp, refresh));
+    watch('source/img/**/*.{png,jpeg,jpg}', series(images, refresh));
 }
 
 function refresh (done) {
@@ -78,12 +77,6 @@ function images () {
         ])).pipe(dest('build/img'))
 }
 
-function getWebp () {
-    return src('build/img/**/*.{png,jpeg,jpg}')
-        .pipe(webp({ quality: 90}))
-        .pipe(dest('build/img'))
-}
-
 function sprite () {
     return src('source/img/icon-*.svg')
         .pipe(imageMin([imageMin.svgo()]))
@@ -94,12 +87,19 @@ function sprite () {
         .pipe(dest('build/img'))
 }
 
+function logo () {
+    return src('source/img/logo/*.svg')
+        .pipe(imageMin([imageMin.svgo()]))
+        .pipe(dest('build/img/logo'))
+}
+
 function copy () {
     return src([
         'source/fonts/**/*',
         'source/js/*',
         '!source/img/*',
         '!source/img/icon-*.svg',
+        '!source/img/logo/*.svg',
         'source/bg/*',
         'source/*.ico*'
     ], {
@@ -126,7 +126,7 @@ function clean () {
 exports.build = series(
     clean,
     images,
-    getWebp,
+    logo,
     parallel(
         copy,
         html,
@@ -136,11 +136,12 @@ exports.build = series(
         js
     )
 );
+
 exports.start = series(
     series(
         clean,
         images,
-        getWebp,
+        logo,
         parallel(
             copy,
             html,
@@ -156,8 +157,8 @@ exports.start = series(
 
 exports.serve = serve;
 exports.images = images;
-exports.getWebp = getWebp;
 exports.sprite = sprite;
+exports.logo = logo;
 exports.js = js;
 exports.html = html;
 exports.css = css;

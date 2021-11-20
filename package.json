@@ -10,8 +10,11 @@
     "css-nomin": "gulp css-nomin",
     "images": "gulp images",
     "sprite": "gulp sprite",
+    "logo": "gulp logo",
     "js": "gulp js",
-    "serve": "gulp serve"
+    "serve": "gulp serve",
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "repository": {
     "type": "git",

@@ -1,11 +1,6 @@
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-}
-
-html {
-    box-sizing: border-box;
+body {
+    font-style: normal;
+    color: #262626;
 }
 
 a {
@@ -13,17 +8,19 @@ a {
 }
 
 img {
-    width: 100%;
-    height: auto;
+    box-sizing: border-box;
 }
 
-h1 {
-    color: lawngreen;
+h1, h2, h3 {
+    font-family: 'BebasNeue', sans-serif;
+    font-style: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-body {
+.page__container {
     width: 375px;
     margin: 0 auto;
-    background-color: #262626;
-    color: #FFFFFF;
+    background-color: #F4F4F4;
+    color: #262626;
 }

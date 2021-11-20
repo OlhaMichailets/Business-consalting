@@ -1,0 +1,40 @@
+.title__section{
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.display--none {
+    display: none;
+}
+
+.title__imgbg {
+    background-image: url('/img/mobile/mob-bg-title.jpg');
+    background-repeat: no-repeat;
+    width: 180px;
+}
+
+.title__section span {
+    display: block;
+    font-family: 'BebasNeue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title__first-word {
+    font-size: 72px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #262626;
+}
+
+.title__second-word {
+    font-size: 72px;
+}
+
+.title__third-word {
+    font-size: 64px;
+    line-height: 64px;
+    color: #262626;
+    text-shadow: 3px 2px 0px #83C1FA;
+}
