@@ -1,13 +1,18 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+.header__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: max-content;
+}
+
+.header__grid--item1 {
+  align-self: center;
 }
 
 .theme--toggle {
   width: 24px;
   height: 24px;
+  align-self: center;
+  justify-self: center;
 }
 
 .button--burger {
@@ -16,5 +21,6 @@ header {
   fill: none;
   width: 46px;
   height: 46px;
+  justify-self: flex-end;
 }
 
