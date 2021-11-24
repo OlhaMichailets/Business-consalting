@@ -1,0 +1,30 @@
+.about-me__section {
+    display: grid;
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    grid-template-columns: calc(50vw - 15px) calc(50vw - 15px);
+    grid-template-areas: "about-me__item1 about-me__item2"
+                        "about-me__item3 about-me__item3"
+                        "about-me__item4 about-me__item4";
+
+    border-bottom: solid 1px #C4C4C4;
+}
+
+.about-me__item1 {grid-area: about-me__item1;}
+
+.about-me__item2 {
+    grid-area: about-me__item2;
+    margin-top: 43px;
+    margin-bottom: 30px;
+}
+
+.about-me__item3 {
+    grid-area: about-me__item3;
+    width: calc(100vw - 30px);
+}
+
+.about-me__item4 {
+    grid-area: about-me__item4;
+    align-self: center;
+    justify-self: center;
+}
