@@ -47,6 +47,7 @@
     "svgstore": "^3.0.1"
   },
   "dependencies": {
-    "gulp-imagemin": "^7.1.0"
+    "gulp-imagemin": "^7.1.0",
+    "swiper": "^7.3.0"
   }
 }

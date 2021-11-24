@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["Swiper","autoHeight","slidesPerView"],"mappings":"AACA,IAAIA,OAAO,YAAa,CACpBC,YAAY,EACZC,cAAe","file":"script.js","sourcesContent":["// swiper\nnew Swiper('.mySwiper', {\n    autoHeight: true,\n    slidesPerView: 2,\n});\n\n"]}
