@@ -9,6 +9,15 @@ body {
     color: #262626;
     width: calc(100vw - 30px);
     margin: 15px;
+    a :link {
+        color: #262626;
+    }
+    a :alink {
+        color: #83C1FA;
+    }
+    a :vlink {
+        color: #83C1FA;
+    }
 }
 
 a, ol, ul, li {
@@ -24,18 +33,32 @@ h1, h2, h3 {
     font-style: normal;
     margin-block-start: 0;
     margin-block-end: 0;
+    p {
+        font-family: 'SFPro', sans-serif;
+        font-style: normal;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
-h3 {
+h3, .section__header-h3 {
     margin-top: 50px;
+    font-family: 'BebasNeue';
+    font-weight: 400;
     font-size: 36px;
     line-height: 43px;
     color: #262626;
+    margin-bottom: 1em;
+    p {
+        font-family: 'SFPro', sans-serif;
+        font-style: normal;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
-p {
-    font-family: 'SFPro', sans-serif;
-    font-style: normal;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
+

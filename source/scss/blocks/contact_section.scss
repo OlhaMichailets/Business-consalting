@@ -1,0 +1,30 @@
+.contact__section p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #BDBDBD;
+    margin-bottom: 2em;
+}
+
+.contact__link, a {
+    text-decoration: none;
+    font-family: 'BebasNeue';
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 56px;
+    color: #262626;
+}
+.icon {
+    width: 86px;
+    height: 86px;
+    fill: #E0E0E0;
+    color: transparent;
+}
+.arrow {
+    width: 43px;
+    height: 43px;
+}
+.bg__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,40 @@
+.videoreview__section h3 {
+    margin-bottom: 60px;
+}
+
+.swiper {
+    margin-bottom: 220px;
+}
+
+.video-slide {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.btn__play-video-feedback {
+    position: absolute;
+    top: 50%;
+    left: calc((100% - 25%)/2);
+    transform: translate(-50%,-50%);
+}
+.video-slide span {
+    display: block;
+}
+
+.reviews-name {
+    font-family: 'SFPro';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #262626;
+}
+
+.reviews-role {
+    font-family: 'SFPro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
