@@ -1,16 +1,16 @@
 html {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: #F4F4F4;
-    max-width: 100%;
+    width: 1300px;
 
 }
 
 body {
     font-style: normal;
+    background-color: #F4F4F4;
+    margin: 0 50px;
     color: #262626;
-    max-width: 1200px;
-    width: calc(100vw - 30px);
     a :link {
         color: #262626;
     }
@@ -23,11 +23,12 @@ body {
 }
 
 header, main, footer {
-    width: calc(100vw - 30px);
 }
 
 a, ol, ul, li {
     text-decoration: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 img {
