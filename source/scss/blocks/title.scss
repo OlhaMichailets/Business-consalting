@@ -4,10 +4,11 @@
 }
 
 .title__imgbg {
-    background-image: url('/img/mobile/mob-bg-title.jpg');
-    background-repeat: no-repeat;
-    min-height: 170px;
-    background-position: top 15px right 0;
+    position: absolute;
+    box-shadow: 2px 3px 0px #262626;
+    right: 15px;
+    top: 25%;
+    z-index: -1;
 }
 
 .titile__item span {

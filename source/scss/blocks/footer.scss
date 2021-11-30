@@ -1,0 +1,25 @@
+footer {
+    margin-top: 100px;
+}
+
+footer {
+    display: block;
+    span {
+        display: block;
+        font-family: 'SFPro';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #BDBDBD;
+        a {
+            display: inline-block;
+            font-family: 'SFPro';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #BDBDBD;
+            border-bottom: 1px solid #C4C4C4;
+            margin-top: 15px;
+        }
+    }
+}

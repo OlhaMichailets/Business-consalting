@@ -5,7 +5,11 @@
     margin-bottom: 2em;
 }
 
-.contact__link, a {
+.bg__wrapper {
+    margin-bottom: 20px;
+}
+
+.contact__link {
     text-decoration: none;
     font-family: 'BebasNeue';
     font-weight: bold;
@@ -17,14 +21,21 @@
     width: 86px;
     height: 86px;
     fill: #E0E0E0;
-    color: transparent;
 }
 .arrow {
     width: 43px;
     height: 43px;
+    fill: #E0E0E0;
 }
 .bg__flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.contact__link-block {
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 60px;
+}
+
+
