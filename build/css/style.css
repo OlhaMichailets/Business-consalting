@@ -26,13 +26,13 @@ html {
   margin: 0 auto;
   padding: 0;
   background-color: #F4F4F4;
-  width: 1300px;
+  width: 100vw;
 }
 
 body {
   font-style: normal;
   background-color: #F4F4F4;
-  margin: 0 50px;
+  margin: 0 10vw;
   color: #262626;
 }
 body a :link {
@@ -98,7 +98,7 @@ h3 p, .section__header-h3 p {
 
 .header__grid {
   display: grid;
-  width: 1200px;
+  width: 80vw;
   margin: 27px auto 106px auto;
   grid-template-columns: 6fr 18fr 20fr 5fr 51fr;
   height: -webkit-max-content;
@@ -165,7 +165,7 @@ h3 p, .section__header-h3 p {
   background-color: #83C1FA;
 }
 
-@media (max-width: 687px) {
+@media (max-width: 768px) {
   .header__grid {
     grid-template-areas: "logo . . theme-toggle burger";
   }
@@ -186,7 +186,7 @@ h3 p, .section__header-h3 p {
     color: #262626;
     border: 1px solid;
     border-radius: 50%;
-    padding: 16px 10px;
+    padding: 16px 9px;
   }
   .burger .burger-top, .burger .burger-bottom {
     height: 1px;
@@ -201,6 +201,10 @@ h3 p, .section__header-h3 p {
     background: black;
     border-radius: 1px;
     margin: 6px 6px;
+  }
+
+  .burger:hover {
+    background-color: #83C1FA;
   }
 
   .header__grid--item4 {
