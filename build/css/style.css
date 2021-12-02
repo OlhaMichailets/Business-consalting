@@ -27,6 +27,7 @@ html {
   padding: 0;
   background-color: #F4F4F4;
   width: 100vw;
+  max-width: 1200px;
 }
 
 body {
@@ -94,6 +95,10 @@ h3 p, .section__header-h3 p {
   margin-block-end: 0;
   font-size: 14px;
   line-height: 22px;
+}
+
+.popup {
+  display: none;
 }
 
 .header__grid {
@@ -165,7 +170,7 @@ h3 p, .section__header-h3 p {
   background-color: #83C1FA;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .header__grid {
     grid-template-areas: "logo . . theme-toggle burger";
   }
@@ -185,7 +190,7 @@ h3 p, .section__header-h3 p {
     justify-self: right;
     color: #262626;
     border: 1px solid;
-    border-radius: 50%;
+    border-radius: 30%;
     padding: 16px 9px;
   }
   .burger .burger-top, .burger .burger-bottom {

@@ -62,7 +62,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .header__grid {
     grid-template-areas: "logo . . theme-toggle burger";
 }
@@ -80,7 +80,7 @@
     justify-self: right;
     color: #262626;
     border: 1px solid;
-    border-radius: 50%;
+    border-radius: 30%;
     padding: 16px 9px;
     .burger-top, .burger-bottom {
       height: 1px;
