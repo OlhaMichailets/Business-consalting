@@ -38,7 +38,7 @@
             </ul>
 
             <div class="header__grid--item4">
-                <button type="button">Связаться со мной</button>
+                <button type="button"><a href="#">Связаться со мной</a></button>
             </div>
 
             <div class="burger burger-shown header__grid--item5">
@@ -54,7 +54,14 @@
 
         <main>
             <section class="title__section">
-                <div class="titile__item">
+                <h1 class="visually-hidden">здесь будет заголовок</h1>
+                <div class="title__wrap">
+                    <span class="title__first-word">Бизнес-</span>
+                    <span class="title__second-word visually-hidden">будет</span>
+                    <span class="title__third-word">Консалтинг</span>
+                </div>
+
+                <div class="title__imgbg-wrap">
                     <picture>
                         <source
                             media="(min-width: 960px)"
@@ -66,18 +73,12 @@
                             img/mobile/mob-bg-title.jpg 1x">
                         <img class="title__imgbg" src="img/mobile/mob-bg-title.jpg" alt="picture with motivated man">
                     </picture>
-                    <h1 class="visually-hidden">здесь будет заголовок</h1>
-                    <span class="title__first-word">здесь</span>
-                    <span class="title__second-word">будет</span>
-                    <span class="title__third-word">заголовок</span>
                 </div>
 
-                <div class="title__txt">
-                    <svg class="title__line-imgbg">
-                        <use xlink:href="img/sprite.svg#icon-title-line"></use>
-                    </svg>
-                    <p>Консультирую по вопросам масштабирования бизнеса</p>
-                </div>
+                <svg class="title__line-imgbg">
+                    <use xlink:href="img/sprite.svg#icon-title-line"></use>
+                </svg>
+                <p class="title__txt">Консультирую по вопросам масштабирования бизнеса</p>
 
             </section>
 
