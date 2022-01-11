@@ -86,7 +86,6 @@ h1 p, h2 p, h3 p {
 }
 
 h3, .section__header-h3 {
-  margin-top: 50px;
   font-family: "BebasNeue";
   font-weight: 400;
   font-size: 36px;
@@ -103,6 +102,10 @@ h3 p, .section__header-h3 p {
   margin-block-end: 0;
   font-size: 14px;
   line-height: 22px;
+}
+
+h3 {
+  margin-top: 50px;
 }
 
 .popup, .shown {
@@ -421,8 +424,27 @@ h3 p, .section__header-h3 p {
   justify-self: center;
 }
 
-li p {
+.main-spec__section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  grid-template-areas: "main-spec-grid__item1 main-spec-grid__item2";
+}
+
+.main-spec-grid__item1 {
+  grid-area: main-spec-grid__item1;
+}
+
+.main-spec-grid__item2 {
+  grid-area: main-spec-grid__item2;
+  margin-top: 50px;
+}
+
+.spec-item-text p {
   display: none;
+  overflow: hidden;
 }
 
 ol {
@@ -456,18 +478,49 @@ ol li, ol li::marker {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #4F4F4F;
-}
-
-.spec__item--click {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  color: #BDBDBD;
   border-bottom: 1px solid #E0E0E0;
 }
 
-.spec__item--click:hover {
+.list-spec-item {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.list-spec-item:hover {
   border-bottom: 1px solid #83C1FA;
+  color: #BDBDBD;
+}
+
+.list-spec-item__accordion {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: none;
+  background-color: transparent;
+  font-family: "SFPro";
+  color: #262626;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.list-spec-item__accordion:hover {
   color: #83C1FA;
+}
+
+.list-spec-item__accordion::after {
+  content: url("../img/desktop/about-us-dropdown-arrow-lite-mode-default.png");
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: url("../img/desktop/about-us-dropdown-arrow-lite-mode-active.png");
+  margin-left: 5px;
 }
 
 h2 {

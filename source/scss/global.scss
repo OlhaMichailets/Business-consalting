@@ -60,7 +60,7 @@ h1, h2, h3 {
 }
 
 h3, .section__header-h3 {
-    margin-top: 50px;
+    // margin-top: 50px;
     font-family: 'BebasNeue';
     font-weight: 400;
     font-size: 36px;
@@ -75,6 +75,10 @@ h3, .section__header-h3 {
         font-size: 14px;
         line-height: 22px;
     }
+}
+
+h3 {
+    margin-top: 50px;
 }
 
 .popup, .shown {
