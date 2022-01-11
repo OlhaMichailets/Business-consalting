@@ -23,27 +23,35 @@
   font-weight: 400;
 }
 html {
-  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
   padding: 0;
-  background-color: #F4F4F4;
-  width: 100vw;
-  max-width: 1200px;
 }
 
 body {
   font-style: normal;
   background-color: #F4F4F4;
-  margin: 0 10vw;
+  width: 100%;
+  margin: 0 auto;
   color: #262626;
 }
 body a :link {
   color: #262626;
 }
-body a :alink {
+body a :active {
   color: #83C1FA;
 }
-body a :vlink {
+body a :visited {
   color: #83C1FA;
+}
+body .theme__toggle {
+  background-color: #262626;
+  color: #FFFFFF;
+}
+
+.body__wrapper {
+  max-width: 84%;
+  margin: 0 auto;
 }
 
 a, ol, ul, li {
@@ -97,14 +105,22 @@ h3 p, .section__header-h3 p {
   line-height: 22px;
 }
 
-.popup {
+.popup, .shown {
   display: none;
+}
+
+.shown {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .header__grid {
   display: grid;
-  width: 80vw;
-  margin: 27px auto 106px auto;
+  margin-top: 27px;
+  margin-bottom: 106px;
   grid-template-columns: 6fr 18fr 20fr 5fr 51fr;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -163,6 +179,7 @@ h3 p, .section__header-h3 p {
   border: 1px solid #83C1FA;
   box-sizing: border-box;
   border-radius: 60px;
+  transition-delay: 0.2s;
 }
 .header__grid--item4 button a {
   color: #262626;
@@ -224,7 +241,7 @@ h3 p, .section__header-h3 p {
     display: none;
   }
 }
-.visually-hidden {
+.shown {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -233,7 +250,6 @@ h3 p, .section__header-h3 p {
 }
 
 .title__section {
-  width: 80vw;
   margin: 0 auto 220px;
   display: grid;
   grid-template-areas: "a a . b" "c d . b";
@@ -314,18 +330,37 @@ h3 p, .section__header-h3 p {
     padding-bottom: 5px;
   }
 }
+@media (max-width: 945px) {
+  .title__wrap .title__first-word, .title__wrap .title__second-word, .title__wrap .title__third-word {
+    font-size: 72px;
+  }
+
+  .title__wrap .title__third-word {
+    text-shadow: 3px 2px 0px #83C1FA;
+  }
+
+  .title__imgbg-wrap .title__imgbg {
+    box-shadow: 3px 2px 0 #83c1fa;
+    float: right;
+  }
+}
 @media (max-width: 865px) {
   .title__wrap span {
     font-size: 64px;
   }
 }
-.about-me__section {
+.about-me__wrapper::before {
+  background-image: url(img/desktop/about-us-bgtext-lite-mode.png) no-repeat;
+  background-position: 0% -25%;
+}
+
+.about-me__wrapper {
   display: grid;
-  width: calc(100vw - 30px);
-  margin: 0 auto;
-  grid-template-columns: calc(50vw - 15px) calc(50vw - 15px);
-  grid-template-areas: "about-me__item1 about-me__item2" "about-me__item3 about-me__item3" "about-me__item4 about-me__item4";
+  grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+  grid-template-areas: "about-me__item1 about-me__item3" "about-me__item2 about-me__item4";
   border-bottom: solid 1px #C4C4C4;
+  border-top: solid 1px #C4C4C4;
+  padding-bottom: 220px;
 }
 
 .about-me__item1 {
@@ -335,16 +370,46 @@ h3 p, .section__header-h3 p {
 .about-me__item2 {
   grid-area: about-me__item2;
   margin-top: 43px;
-  margin-bottom: 30px;
-  justify-self: right;
+  justify-self: left;
   overflow: hidden;
-  width: 75%;
+  position: relative;
+  transform: rotate(-15deg);
+  margin-left: 75px;
+  margin-bottom: 50px;
+  width: 213px;
+  height: 281px;
+}
+
+.shadow__wrapper::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #83C1FA;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+}
+
+.about-me-img__container {
+  overflow: hidden;
+}
+
+.img-mainhero {
+  width: 100%;
   height: auto;
+  transform: scale(1.3) rotate(15deg) translateX(5px);
 }
 
 .about-me__item3 {
   grid-area: about-me__item3;
-  width: calc(100vw - 30px);
+  margin-top: 50px;
+  margin-bottom: 56px;
+  font-family: "SFPro";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
 }
 
 .about-me__item4 {
@@ -356,24 +421,6 @@ h3 p, .section__header-h3 p {
   justify-self: center;
 }
 
-.img-mainhero {
-  display: block;
-  right: 15px;
-  min-width: 100%;
-  min-height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: 50% 20%;
-  object-position: 50% 20%;
-}
-
-@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
-  .about-me__item2 {
-    width: 100%;
-    -webkit-clip-path: polygon(85% 0%, 100% 85%, 15% 100%, 0% 15%);
-    clip-path: polygon(85% 0%, 100% 85%, 15% 100%, 0% 15%);
-  }
-}
 li p {
   display: none;
 }

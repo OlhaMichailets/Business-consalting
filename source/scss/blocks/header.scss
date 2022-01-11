@@ -1,7 +1,7 @@
 .header__grid {
     display: grid;
-    width:80vw;
-    margin: 27px auto 106px auto;
+    margin-top: 27px;
+    margin-bottom: 106px;
     grid-template-columns: (6fr 18fr 20fr 5fr 51fr);
     height: max-content;
     grid-template-areas: "logo theme-toggle menu . button";
@@ -54,6 +54,7 @@
     border: 1px solid #83C1FA;
     box-sizing: border-box;
     border-radius: 60px;
+    transition-delay: 0.2s;
     a {
       color: #262626;
     }

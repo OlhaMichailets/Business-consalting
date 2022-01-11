@@ -1,5 +1,5 @@
 
-.visually-hidden {
+.shown {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -8,7 +8,6 @@
   }
 
   .title__section {
-    width: 80vw;
     margin: 0 auto 220px;
     display: grid;
     grid-template-areas:
@@ -20,9 +19,7 @@
 
 .title__imgbg-wrap {
     grid-area: b;
-    // position: relative;
     .title__imgbg {
-        // position: absolute;
         box-shadow: 7px 8px 0px #83C1FA;
         z-index: -1;
     }
@@ -44,7 +41,6 @@
     .title__first-word {
         font-size: 190px;
         font-weight: 700;
-        // line-height: 12em;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #262626;
@@ -54,14 +50,12 @@
     .title__second-word {
         font-size: 190px;
         font-weight: 700;
-        // line-height: 12em;
         white-space: nowrap;
     }
 
     .title__third-word {
         font-size: 190px;
         font-weight: 700;
-        // line-height: 12em;
         color: #262626;
         text-shadow: 7px 6px 0px #83C1FA;
         white-space: nowrap;
@@ -99,6 +93,19 @@
 
     .title__line-imgbg {
         padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 945px) {
+    .title__wrap .title__first-word, .title__wrap .title__second-word, .title__wrap .title__third-word {
+        font-size: 72px;
+    }
+    .title__wrap .title__third-word {
+        text-shadow: 3px 2px 0px #83C1FA;
+    }
+    .title__imgbg-wrap .title__imgbg {
+        box-shadow: 3px 2px 0 #83c1fa;
+        float: right;
     }
 }
 

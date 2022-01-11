@@ -1,28 +1,37 @@
 html {
-    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
     padding: 0;
-    background-color: #F4F4F4;
-    width: 100vw;
-    max-width: 1200px;
+    // background-color: #F4F4F4;
+    // width: 100vw;
+    // max-width: 1200px;
+
 }
 
 body {
     font-style: normal;
     background-color: #F4F4F4;
-    margin: 0 10vw;
+    width: 100%;
+    margin: 0 auto;
     color: #262626;
     a :link {
         color: #262626;
     }
-    a :alink {
+    a :active {
         color: #83C1FA;
     }
-    a :vlink {
+    a :visited {
         color: #83C1FA;
+    }
+    .theme__toggle {
+        background-color: #262626;
+        color: #FFFFFF;
     }
 }
 
-header, main, footer {
+.body__wrapper {
+    max-width: 84%;
+    margin: 0 auto;
 }
 
 a, ol, ul, li {
@@ -68,8 +77,16 @@ h3, .section__header-h3 {
     }
 }
 
-.popup {
+.popup, .shown {
     display: none;
 }
+
+.shown {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
 
 

@@ -1,6 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('sdasdsad');
     var swiper = new Swiper(
         ".mySwiper",
         {
