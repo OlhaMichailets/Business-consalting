@@ -68,7 +68,8 @@ margin-top: 40px;
     }
 }
 
-.mySwiper {
-    max-width: 1000px;
+.webnautsSwiper, .mySwiper {
+    max-width: 1200px;
     overflow: hidden;
+    min-width: 0;
 }
