@@ -1,32 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-  new Swiper('.mySwiper', {
+  new Swiper('.webnautsSwiper', {
     slidesPerView: 1,
-    spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'fraction'
-  //   },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    },
 
   },
   );
 
-  // new Swiper('.mySwiper', {
-  //   // navigation: {
-  //   //   nextEl: '.swiper-button-next',
-  //   //   prevEl: '.swiper-button-prev'
-  //   // },
-  //   slidesPerView: 10,
-  //   spaceBetween: 10,
-  //   // pagination: {
-  //   //   el: '.swiper-pagination',
-  //   //   type: 'fraction'
-  //   // },
-  // },
-  // );
+  new Swiper('.growthSwiper', {
+    slidesPerView: 1,
+    nested: true,
+    spaceBetween: 30,
+
+    thumbs: {
+      swiper: {
+        el: '.growthSwiper-mini-slider',
+        slidesPerView: 4.6,
+        spaceBetween: 30,
+        watchOverflow: true
+      },
+    },
+  },
+  );
 
 });
 
