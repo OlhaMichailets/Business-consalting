@@ -1,3 +1,5 @@
+// const { default: Swiper } = require("swiper");
+
 document.addEventListener('DOMContentLoaded', function() {
   new Swiper('.webnautsSwiper', {
     slidesPerView: 1,
@@ -25,6 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 30,
         watchOverflow: true
       },
+    },
+  },
+  );
+
+  new Swiper('.teamSwiper', {
+    nested: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    grid: {
+      rows: 2,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   },
   );
