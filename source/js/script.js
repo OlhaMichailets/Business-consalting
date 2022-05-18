@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var swiper = new Swiper(
-//         ".mySwiper",
-//         {
-//           slidesPerView: 1.3,
-//           spaceBetween: 10,
-//         },
-//       );
-// });
+const swiperPrev = document.getElementById('swiperPrev')
+const swiperNext = document.getElementById('swiperNext')
+
+swiperPrev.addEventListener('click', () => {
+  mySwiper.slidePrev();
+})
+swiperNext.addEventListener('click', () => {
+  mySwiper.slideNext();
+})
 

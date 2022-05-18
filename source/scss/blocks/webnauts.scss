@@ -1,9 +1,23 @@
 h2 {
-    font-size: 72px;
-    line-height: 72px;
+    font-size: 190px;
+    line-height: 190px;
     color: #262626;
-    text-shadow: 3px 2px 0px #83C1FA;
+    text-shadow: 7px 6px 0px #83C1FA;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding-top: 50px;
+}
+
+.swiper-button-prev {
+    font-family: 'BebasNeue';
+    content: 'Дальше';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: none!important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
 }
 
 .webnauts__rabout .rabout__item p {

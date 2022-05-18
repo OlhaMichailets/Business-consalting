@@ -1,0 +1,43 @@
+.webnauts__section {
+    position: relative;
+}
+
+#swiperPrev,
+#swiperNext {
+    width: 85px !important;
+    height: 85px !important;
+    border: 1px solid #262626 !important;
+    border-radius: 50% !important;
+    font-family: 'BebasNeue';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #262626 !important;
+    position: absolute;
+}
+
+#swiperPrev:hover,
+#swiperNext:hover {
+    width: 85px !important;
+    height: 85px !important;
+    border: 1px solid #83C1FA !important;
+    border-radius: 50% !important;
+    background-color: #83C1FA;
+    font-family: 'BebasNeue';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}

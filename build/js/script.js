@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 
   new Swiper('.teamSwiper', {
+    nested: true,
     slidesPerView: 4,
     spaceBetween: 20,
     grid: {

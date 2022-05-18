@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "BebasNeue";
   src: url("/fonts/BebasNeueRegular.otf");
@@ -118,6 +119,50 @@ h3 {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.webnauts__section {
+  position: relative;
+}
+
+#swiperPrev,
+#swiperNext {
+  width: 85px !important;
+  height: 85px !important;
+  border: 1px solid #262626 !important;
+  border-radius: 50% !important;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #262626 !important;
+  position: absolute;
+}
+
+#swiperPrev:hover,
+#swiperNext:hover {
+  width: 85px !important;
+  height: 85px !important;
+  border: 1px solid #83C1FA !important;
+  border-radius: 50% !important;
+  background-color: #83C1FA;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }
 
 .header__grid {
@@ -517,11 +562,25 @@ details[open] summary {
 }
 
 h2 {
-  font-size: 72px;
-  line-height: 72px;
+  font-size: 190px;
+  line-height: 190px;
   color: #262626;
-  text-shadow: 3px 2px 0px #83C1FA;
+  text-shadow: 7px 6px 0px #83C1FA;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding-top: 50px;
+}
+
+.swiper-button-prev {
+  font-family: "BebasNeue";
+  content: "Дальше";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
 }
 
 .webnauts__rabout .rabout__item p {
